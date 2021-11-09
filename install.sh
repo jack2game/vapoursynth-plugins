@@ -56,6 +56,7 @@ rm -rfv /usr/src/cf
 pip3 install git+https://git.concertos.live/AHD/awsmfunc.git
 pip3 install git+https://github.com/Irrational-Encoding-Wizardry/vsutil.git
 pip3 install git+https://github.com/Ichunjo/vardefunc.git
+pip3 install git+https://github.com/Irrational-Encoding-Wizardry/lvsfunc.git
 pip3 install numpy
 wget -P /python_module https://github.com/HomeOfVapourSynthEvolution/havsfunc/raw/master/havsfunc.py
 wget -P /python_module https://github.com/Irrational-Encoding-Wizardry/fvsfunc/raw/master/fvsfunc.py
