@@ -5,6 +5,7 @@ cd /usr/src/ffms2
 make
 make install
 rm -rfv /usr/src/ffms2
+cd /usr/src
 ln -s /usr/local/lib/libffms2.so /usr/local/lib/vapoursynth/libffms2.so
 
 git clone https://github.com/l-smash/l-smash.git /usr/src/lsmas
@@ -13,12 +14,14 @@ cd /usr/src/lsmas
 make lib
 make install-lib
 rm -rfv /usr/src/lsmas
+cd /usr/src
 
 git clone https://github.com/AkarinVS/L-SMASH-Works.git /usr/src/lsmas
 cd /usr/src/lsmas/VapourSynth
 meson build
 ninja -C build
 rm -rfv /usr/src/lsmas
+cd /usr/src
 
 pip3 install git+https://git.concertos.live/AHD/awsmfunc.git
 
