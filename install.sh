@@ -49,9 +49,13 @@ cd /usr/src
 cp /usr/src/cf/libcf.so /usr/local/lib/vapoursynth/
 rm -rfv /usr/src/cf
 
-#git clone https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb.git /usr/src/neo_f3kdb
-#cd /usr/src/neo_f3kdb
-
+git clone https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb.git /usr/src/neo_f3kdb
+cd /usr/src/neo_f3kdb
+cmake -B build/gcc -S . -D_DIR=gcc
+cmake --build build/gcc
+cd /usr/src
+cp /usr/src/neo_f3kdb/build/gcc/libneo-f3kdb.so /usr/local/lib/vapoursynth/
+rm -rfv /usr/src/neo_f3kdb
 
 pip3 install git+https://git.concertos.live/AHD/awsmfunc.git
 pip3 install git+https://github.com/Irrational-Encoding-Wizardry/vsutil.git
@@ -75,10 +79,10 @@ wget -P /python_module https://github.com/HomeOfVapourSynthEvolution/mvsfunc/raw
 #cd /usr/src
 #rm -rfv /usr/src/lsmas
 
-# git clone https://github.com/ffmpeg/ffmpeg.git /usr/src/ffmpeg
-# cd /usr/src/ffmpeg
-# ./configure --enable-gpl --enable-libx264 --enable-avresample --enable-shared --enable-libfdk-aac --enable-nonfree
-# make
-# make install
+#git clone https://github.com/ffmpeg/ffmpeg.git /usr/src/ffmpeg
+#cd /usr/src/ffmpeg
+#./configure --enable-gpl --enable-libx264 --enable-avresample --enable-shared --enable-libfdk-aac --enable-nonfree
+#make
+#make install
 #cd /usr/ffmpeg
 #rm -rfv /usr/src/ffmpeg
