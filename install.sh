@@ -88,9 +88,6 @@ wget -P /python_module https://github.com/jack2game/solarcurve/raw/main/solar.py
 wget -P /python_module https://github.com/dubhater/vapoursynth-adjust/raw/master/adjust.py
 wget -P /python_module https://github.com/HomeOfVapourSynthEvolution/mvsfunc/raw/master/mvsfunc.py
 #wget -P /python_module https://github.com/encodingguy/docker-encode/raw/python3.9/function/pterfunc.py
-wget -P /usr/local/lib https://github.com/jack2game/vapoursynth-plugins/raw/main/libeedi3.la
-wget -P /usr/local/lib https://github.com/jack2game/vapoursynth-plugins/raw/main/libeedi3.so
-ln -s /usr/local/lib/libeedi3.so /usr/local/lib/vapoursynth/libeedi3.so
 
 #git clone https://code.videolan.org/videolan/x264/ /usr/src/x264
 #cd /usr/src/x264
