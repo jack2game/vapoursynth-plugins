@@ -21,6 +21,7 @@ cd /usr/src/ffms2
 make
 make install
 rm -rfv /usr/src/ffms2
+ln -s /usr/local/lib/libffms2.so /usr/local/lib/vapoursynth/libffms2.so
 
 git clone https://github.com/l-smash/l-smash.git /usr/src/lsmas
 cd /usr/src/lsmas
