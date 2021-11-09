@@ -19,3 +19,7 @@ cd /usr/src/lsmas/VapourSynth
 meson build
 ninja -C build
 rm -rfv /usr/src/lsmas
+
+pip3 install git+https://git.concertos.live/AHD/awsmfunc.git
+
+pip3 install numpy
