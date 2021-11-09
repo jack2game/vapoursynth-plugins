@@ -24,7 +24,6 @@ cd /usr/src
 rm -rfv /usr/src/lsmas
 
 pip3 install git+https://git.concertos.live/AHD/awsmfunc.git
-
 pip3 install numpy
 
 #git clone https://code.videolan.org/videolan/x264/ /usr/src/x264
