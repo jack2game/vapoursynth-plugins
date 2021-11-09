@@ -57,6 +57,24 @@ cd /usr/src
 cp /usr/src/neo_f3kdb/build/gcc/libneo-f3kdb.so /usr/local/lib/vapoursynth/
 rm -rfv /usr/src/neo_f3kdb
 
+git clone https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral.git /usr/src/bilateral
+cd /usr/src/bilateral
+./configure
+make
+make install
+cd /usr/src
+rm -rfv /usr/src/bilateral
+
+git clone -b v1.0 https://github.com/dubhater/vapoursynth-histogram.git /usr/src/histogram
+cd /usr/src/histogram
+./autogen.sh
+./configure
+make
+make install
+cd /usr/src
+rm -rfv /usr/src/histogram
+ln -s /usr/local/lib/libhistogram.so /usr/local/lib/vapoursynth/libhistogram.so
+
 pip3 install git+https://git.concertos.live/AHD/awsmfunc.git
 pip3 install git+https://github.com/Irrational-Encoding-Wizardry/vsutil.git
 #pip3 install git+https://github.com/Irrational-Encoding-Wizardry/lvsfunc.git
