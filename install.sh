@@ -75,7 +75,7 @@ cd /usr/src
 rm -rfv /usr/src/histogram
 ln -s /usr/local/lib/libhistogram.so /usr/local/lib/vapoursynth/libhistogram.so
 
-git clone -b r27 https://github.com/EleonoreMizo/fmtconv.git /usr/src/fmtconv
+git clone -b r24 https://github.com/EleonoreMizo/fmtconv.git /usr/src/fmtconv
 cd /usr/src/fmtconv/build/unix
 ./autogen.sh
 ./configure
