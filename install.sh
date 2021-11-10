@@ -85,12 +85,37 @@ cd /usr/src
 rm -rfv /usr/src/fmtconv
 ln -s /usr/local/lib/libfmtconv.so /usr/local/lib/vapoursynth/libfmtconv.so
 
+wget -P /python_module https://github.com/HomeOfVapourSynthEvolution/havsfunc/archive/refs/tags/r33.zip
+cd /python_module
+unzip r33.zip
+rm r33.zip
+cp /python_module/havsfunc-r33/havsfunc.py /python_module/havsfunc.py
+rm -rfv /python_module/havsfunc-r33
+
+git clone https://github.com/dubhater/vapoursynth-mvtools.git /usr/src/mvtools
+cd /usr/src/mvtools
+meson build
+ninja -C build
+cd /usr/src
+cp /usr/src/mvtools/build/libmvtools.so /usr/local/lib/vapoursynth/
+rm -rfv /usr/src/mvtools
+
+git clone https://github.com/dubhater/vapoursynth-nnedi3.git /usr/src/nnedi3
+cd /usr/src/nnedi3
+./autogen.sh
+./configure
+make
+make install
+cd /usr/src
+rm -rfv /usr/src/nnedi3
+ln -s /usr/local/lib/libnnedi3.so /usr/local/lib/vapoursynth/libnnedi3.so
+
 pip3 install git+https://git.concertos.live/AHD/awsmfunc.git
 pip3 install git+https://github.com/Irrational-Encoding-Wizardry/vsutil.git
 #pip3 install git+https://github.com/Irrational-Encoding-Wizardry/lvsfunc.git
 #pip3 install git+https://github.com/Ichunjo/vardefunc.git
 pip3 install numpy
-wget -P /python_module https://github.com/HomeOfVapourSynthEvolution/havsfunc/raw/master/havsfunc.py
+# wget -P /python_module https://github.com/HomeOfVapourSynthEvolution/havsfunc/raw/master/havsfunc.py
 wget -P /python_module https://github.com/Irrational-Encoding-Wizardry/fvsfunc/raw/master/fvsfunc.py
 wget -P /python_module https://github.com/Irrational-Encoding-Wizardry/kagefunc/raw/master/kagefunc.py
 wget -P /python_module https://gitlab.com/Ututu/adptvgrnmod/-/raw/master/adptvgrnMod.py
