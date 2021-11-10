@@ -110,6 +110,34 @@ cd /usr/src
 rm -rfv /usr/src/nnedi3
 ln -s /usr/local/lib/libnnedi3.so /usr/local/lib/vapoursynth/libnnedi3.so
 
+git clone https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock.git /usr/src/Deblock
+cd /usr/src/Deblock
+./autogen.sh
+./configure
+make
+make install
+cd /usr/src
+rm -rfv /usr/src/Deblock
+ln -s /usr/local/lib/libdeblock.so /usr/local/lib/vapoursynth/libdeblock.so
+
+git clone https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DCTFilter.git /usr/src/DCTFilter
+cd /usr/src/DCTFilter
+./autogen.sh
+./configure
+make
+make install
+cd /usr/src
+rm -rfv /usr/src/DCTFilter
+ln -s /usr/local/lib/libdctfilter.so /usr/local/lib/vapoursynth/libdctfilter.so
+
+git clone https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest.git /usr/src/DFTTest
+cd /usr/src/DFTTest
+meson build
+ninja -C build
+cd /usr/src
+cp /usr/src/DFTTest/build/libdfttest.so /usr/local/lib/vapoursynth/
+rm -rfv /usr/src/DFTTest
+
 pip3 install git+https://git.concertos.live/AHD/awsmfunc.git
 pip3 install git+https://github.com/Irrational-Encoding-Wizardry/vsutil.git
 #pip3 install git+https://github.com/Irrational-Encoding-Wizardry/lvsfunc.git
