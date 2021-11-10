@@ -75,6 +75,16 @@ cd /usr/src
 rm -rfv /usr/src/histogram
 ln -s /usr/local/lib/libhistogram.so /usr/local/lib/vapoursynth/libhistogram.so
 
+git clone https://github.com/EleonoreMizo/fmtconv.git /usr/src/fmtconv
+cd /usr/src/fmtconv/build/unix
+./autogen.sh
+./configure
+make
+make install
+cd /usr/src
+rm -rfv /usr/src/fmtconv
+ln -s /usr/local/lib/libfmtconv.so /usr/local/lib/vapoursynth/libfmtconv.so
+
 pip3 install git+https://git.concertos.live/AHD/awsmfunc.git
 pip3 install git+https://github.com/Irrational-Encoding-Wizardry/vsutil.git
 #pip3 install git+https://github.com/Irrational-Encoding-Wizardry/lvsfunc.git
