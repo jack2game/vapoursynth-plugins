@@ -1,4 +1,4 @@
-git clone https://github.com/FFMS/ffms2.git /usr/src/ffms2
+git clone -b r2.4 https://github.com/FFMS/ffms2.git /usr/src/ffms2
 cd /usr/src/ffms2
 ./autogen.sh
 ./configure
@@ -17,7 +17,7 @@ cd /usr/src
 rm -rfv /usr/src/lsmas
 ln -s /usr/local/lib/liblsmash.so /usr/local/lib/vapoursynth/liblsmash.so
 
-git clone https://github.com/AkarinVS/L-SMASH-Works.git /usr/src/lsmasvs
+git clone -b vA.3g https://github.com/AkarinVS/L-SMASH-Works.git /usr/src/lsmasvs
 cd /usr/src/lsmasvs/VapourSynth
 meson build
 ninja -C build
@@ -25,7 +25,7 @@ cd /usr/src
 cp /usr/src/lsmasvs/VapourSynth/build/libvslsmashsource.so /usr/local/lib/vapoursynth/
 rm -rfv /usr/src/lsmasvs
 
-git clone https://github.com/Irrational-Encoding-Wizardry/Vapoursynth-RemapFrames.git /usr/src/remap
+git clone -b v1.1 https://github.com/Irrational-Encoding-Wizardry/Vapoursynth-RemapFrames.git /usr/src/remap
 cd /usr/src/remap
 meson build
 ninja -C build
@@ -33,7 +33,7 @@ cd /usr/src
 cp /usr/src/remap/build/libremapframes.so /usr/local/lib/vapoursynth/
 rm -rfv /usr/src/remap
 
-git clone https://github.com/dubhater/vapoursynth-fillborders.git /usr/src/fillborders
+git clone -b v2 https://github.com/dubhater/vapoursynth-fillborders.git /usr/src/fillborders
 cd /usr/src/fillborders
 meson build
 ninja -C build
@@ -49,7 +49,7 @@ cd /usr/src
 cp /usr/src/cf/libcf.so /usr/local/lib/vapoursynth/
 rm -rfv /usr/src/cf
 
-git clone https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb.git /usr/src/neo_f3kdb
+git clone -b r7 https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb.git /usr/src/neo_f3kdb
 cd /usr/src/neo_f3kdb
 cmake -B build/gcc -S . -D_DIR=gcc
 cmake --build build/gcc
@@ -57,7 +57,7 @@ cd /usr/src
 cp /usr/src/neo_f3kdb/build/gcc/libneo-f3kdb.so /usr/local/lib/vapoursynth/
 rm -rfv /usr/src/neo_f3kdb
 
-git clone https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral.git /usr/src/bilateral
+git clone -b r3 https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral.git /usr/src/bilateral
 cd /usr/src/bilateral
 ./configure
 make
@@ -75,7 +75,7 @@ cd /usr/src
 rm -rfv /usr/src/histogram
 ln -s /usr/local/lib/libhistogram.so /usr/local/lib/vapoursynth/libhistogram.so
 
-git clone https://github.com/EleonoreMizo/fmtconv.git /usr/src/fmtconv
+git clone -b r27 https://github.com/EleonoreMizo/fmtconv.git /usr/src/fmtconv
 cd /usr/src/fmtconv/build/unix
 ./autogen.sh
 ./configure
@@ -92,7 +92,7 @@ rm r33.zip
 cp /python_module/havsfunc-r33/havsfunc.py /python_module/havsfunc.py
 rm -rfv /python_module/havsfunc-r33
 
-git clone https://github.com/dubhater/vapoursynth-mvtools.git /usr/src/mvtools
+git clone -b v23 https://github.com/dubhater/vapoursynth-mvtools.git /usr/src/mvtools
 cd /usr/src/mvtools
 meson build
 ninja -C build
@@ -100,7 +100,7 @@ cd /usr/src
 cp /usr/src/mvtools/build/libmvtools.so /usr/local/lib/vapoursynth/
 rm -rfv /usr/src/mvtools
 
-git clone https://github.com/dubhater/vapoursynth-nnedi3.git /usr/src/nnedi3
+git clone -b v12 https://github.com/dubhater/vapoursynth-nnedi3.git /usr/src/nnedi3
 cd /usr/src/nnedi3
 ./autogen.sh
 ./configure
@@ -110,7 +110,7 @@ cd /usr/src
 rm -rfv /usr/src/nnedi3
 ln -s /usr/local/lib/libnnedi3.so /usr/local/lib/vapoursynth/libnnedi3.so
 
-git clone https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock.git /usr/src/Deblock
+git clone -b r6.1 https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock.git /usr/src/Deblock
 cd /usr/src/Deblock
 ./autogen.sh
 ./configure
@@ -120,7 +120,7 @@ cd /usr/src
 rm -rfv /usr/src/Deblock
 ln -s /usr/local/lib/libdeblock.so /usr/local/lib/vapoursynth/libdeblock.so
 
-git clone https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DCTFilter.git /usr/src/DCTFilter
+git clone -b r2.1 https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DCTFilter.git /usr/src/DCTFilter
 cd /usr/src/DCTFilter
 ./autogen.sh
 ./configure
@@ -130,13 +130,40 @@ cd /usr/src
 rm -rfv /usr/src/DCTFilter
 ln -s /usr/local/lib/libdctfilter.so /usr/local/lib/vapoursynth/libdctfilter.so
 
-git clone https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest.git /usr/src/DFTTest
+git clone -b r7 https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest.git /usr/src/DFTTest
 cd /usr/src/DFTTest
 meson build
 ninja -C build
 cd /usr/src
 cp /usr/src/DFTTest/build/libdfttest.so /usr/local/lib/vapoursynth/
 rm -rfv /usr/src/DFTTest
+
+git clone -b r8 https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain.git /usr/src/AddGrain
+cd /usr/src/AddGrain
+meson build
+ninja -C build
+cd /usr/src
+cp /usr/src/AddGrain/build/libaddgrain.so /usr/local/lib/vapoursynth/
+rm -rfv /usr/src/AddGrain
+
+git clone -b r4 https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex.git /usr/src/Retinex
+cd /usr/src/Retinex
+meson build
+ninja -C build
+cd /usr/src
+cp /usr/src/Retinex/build/libretinex.so /usr/local/lib/vapoursynth/
+rm -rfv /usr/src/Retinex
+
+git clone -b r12 https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny.git /usr/src/TCanny
+cd /usr/src/TCanny
+meson build
+ninja -C build
+cd /usr/src
+cp /usr/src/TCanny/build/libtcanny.so /usr/local/lib/vapoursynth/
+rm -rfv /usr/src/TCanny
+
+wget -P /usr/local/lib/vapoursynth https://git.kageru.moe/attachments/b2b71f94-97d9-4e24-9d9d-f42bd22741b2
+mv /usr/local/lib/vapoursynth/b2b71f94-97d9-4e24-9d9d-f42bd22741b2 /usr/local/lib/vapoursynth/libadaptivegrain_rs.so
 
 pip3 install git+https://git.concertos.live/AHD/awsmfunc.git
 pip3 install git+https://github.com/Irrational-Encoding-Wizardry/vsutil.git
