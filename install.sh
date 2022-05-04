@@ -17,7 +17,7 @@ cd /usr/src
 rm -rfv /usr/src/lsmas
 ln -s /usr/local/lib/liblsmash.so /usr/local/lib/vapoursynth/liblsmash.so
 
-git clone -b vA.3g https://github.com/AkarinVS/L-SMASH-Works.git /usr/src/lsmasvs
+git clone -b vA.3i https://github.com/AkarinVS/L-SMASH-Works.git /usr/src/lsmasvs
 cd /usr/src/lsmasvs/VapourSynth
 meson build
 ninja -C build
