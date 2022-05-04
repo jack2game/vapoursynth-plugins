@@ -65,7 +65,7 @@ make install
 cd /usr/src
 rm -rfv /usr/src/bilateral
 
-git clone -b v1.0 https://github.com/dubhater/vapoursynth-histogram.git /usr/src/histogram
+git clone -b v2 https://github.com/dubhater/vapoursynth-histogram.git /usr/src/histogram
 cd /usr/src/histogram
 ./autogen.sh
 ./configure
