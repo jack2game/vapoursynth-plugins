@@ -92,7 +92,7 @@ rm r33.zip
 cp /python_module/havsfunc-r33/havsfunc.py /python_module/havsfunc.py
 rm -rfv /python_module/havsfunc-r33
 
-git clone -b v23 https://github.com/dubhater/vapoursynth-mvtools.git /usr/src/mvtools
+git clone -b v29 https://github.com/dubhater/vapoursynth-mvtools.git /usr/src/mvtools
 cd /usr/src/mvtools
 meson build
 ninja -C build
@@ -138,7 +138,7 @@ cd /usr/src
 cp /usr/src/DFTTest/build/libdfttest.so /usr/local/lib/vapoursynth/
 rm -rfv /usr/src/DFTTest
 
-git clone -b r8 https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain.git /usr/src/AddGrain
+git clone -b r10 https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain.git /usr/src/AddGrain
 cd /usr/src/AddGrain
 meson build
 ninja -C build
@@ -154,7 +154,7 @@ cd /usr/src
 cp /usr/src/Retinex/build/libretinex.so /usr/local/lib/vapoursynth/
 rm -rfv /usr/src/Retinex
 
-git clone -b r12 https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny.git /usr/src/TCanny
+git clone -b r14 https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny.git /usr/src/TCanny
 cd /usr/src/TCanny
 meson build
 ninja -C build
@@ -165,12 +165,12 @@ rm -rfv /usr/src/TCanny
 wget -P /usr/local/lib/vapoursynth https://git.kageru.moe/attachments/b2b71f94-97d9-4e24-9d9d-f42bd22741b2
 mv /usr/local/lib/vapoursynth/b2b71f94-97d9-4e24-9d9d-f42bd22741b2 /usr/local/lib/vapoursynth/libadaptivegrain_rs.so
 
-pip3 install git+https://git.concertos.live/AHD/awsmfunc.git
+pip3 install git+https://github.com/OpusGang/awsmfunc.git
 pip3 install git+https://github.com/Irrational-Encoding-Wizardry/vsutil.git
-#pip3 install git+https://github.com/Irrational-Encoding-Wizardry/lvsfunc.git
-#pip3 install git+https://github.com/Ichunjo/vardefunc.git
+pip3 install git+https://github.com/Irrational-Encoding-Wizardry/lvsfunc.git
+pip3 install git+https://github.com/Ichunjo/vardefunc.git
 pip3 install numpy
-# wget -P /python_module https://github.com/HomeOfVapourSynthEvolution/havsfunc/raw/master/havsfunc.py
+wget -P /python_module https://github.com/HomeOfVapourSynthEvolution/havsfunc/raw/master/havsfunc.py
 wget -P /python_module https://github.com/Irrational-Encoding-Wizardry/fvsfunc/raw/master/fvsfunc.py
 wget -P /python_module https://github.com/Irrational-Encoding-Wizardry/kagefunc/raw/master/kagefunc.py
 wget -P /python_module https://gitlab.com/Ututu/adptvgrnmod/-/raw/master/adptvgrnMod.py
