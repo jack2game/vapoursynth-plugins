@@ -15,7 +15,7 @@ cd /usr/src/imwri
 meson build
 ninja -C build
 cd /usr/src
-cp /usr/src/imwri/build/libsubtext.so /usr/local/lib/vapoursynth/
+cp /usr/src/imwri/build/libimwri.so /usr/local/lib/vapoursynth/
 rm -rfv /usr/src/imwri
 
 git clone -b R3 https://github.com/vapoursynth/subtext.git /usr/src/subtext
