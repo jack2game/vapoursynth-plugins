@@ -1,3 +1,5 @@
+mkdir -p /usr/local/lib/vapoursynth/
+
 git clone -b 2.40 https://github.com/FFMS/ffms2.git /usr/src/ffms2
 cd /usr/src/ffms2
 ./autogen.sh
