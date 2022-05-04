@@ -1,5 +1,23 @@
 mkdir -p /usr/local/lib/vapoursynth/
 
+git clone -b v1.12.0 https://github.com/strukturag/libheif.git /usr/src/libheif
+cd /usr/src/libheif
+./autogen.sh
+./configure
+make
+make install
+cd /usr/src
+rm -rfv /usr/src/libheif
+ln -s /usr/local/lib/libheif.so /usr/local/lib/vapoursynth/libheif.so
+
+git clone -b R1 https://github.com/vapoursynth/vs-imwri.git /usr/src/imwri
+cd /usr/src/imwri
+meson build
+ninja -C build
+cd /usr/src
+cp /usr/src/imwri/build/libsubtext.so /usr/local/lib/vapoursynth/
+rm -rfv /usr/src/imwri
+
 git clone -b R3 https://github.com/vapoursynth/subtext.git /usr/src/subtext
 cd /usr/src/subtext
 meson build
