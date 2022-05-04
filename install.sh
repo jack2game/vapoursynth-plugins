@@ -1,5 +1,13 @@
 mkdir -p /usr/local/lib/vapoursynth/
 
+git clone -b R3 https://github.com/vapoursynth/subtext.git /usr/src/subtext
+cd /usr/src/subtext
+meson build
+ninja -C build
+cd /usr/src
+cp /usr/src/subtext/build/libsubtext.so /usr/local/lib/vapoursynth/
+rm -rfv /usr/src/subtext
+
 git clone -b 2.40 https://github.com/FFMS/ffms2.git /usr/src/ffms2
 cd /usr/src/ffms2
 ./autogen.sh
