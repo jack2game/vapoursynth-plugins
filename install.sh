@@ -171,12 +171,12 @@ pip3 install git+https://github.com/Irrational-Encoding-Wizardry/lvsfunc.git
 pip3 install git+https://github.com/Ichunjo/vardefunc.git
 pip3 install numpy
 wget -P /python_module https://github.com/HomeOfVapourSynthEvolution/havsfunc/raw/master/havsfunc.py
+wget -P /python_module https://github.com/HomeOfVapourSynthEvolution/mvsfunc/raw/master/mvsfunc.py
 wget -P /python_module https://github.com/Irrational-Encoding-Wizardry/fvsfunc/raw/master/fvsfunc.py
 wget -P /python_module https://github.com/Irrational-Encoding-Wizardry/kagefunc/raw/master/kagefunc.py
 wget -P /python_module https://gitlab.com/Ututu/adptvgrnmod/-/raw/master/adptvgrnMod.py
 wget -P /python_module https://github.com/jack2game/solarcurve/raw/main/solar.py
 wget -P /python_module https://github.com/dubhater/vapoursynth-adjust/raw/master/adjust.py
-wget -P /python_module https://github.com/HomeOfVapourSynthEvolution/mvsfunc/raw/master/mvsfunc.py
 #wget -P /python_module https://github.com/encodingguy/docker-encode/raw/python3.9/function/pterfunc.py
 
 #git clone https://code.videolan.org/videolan/x264/ /usr/src/x264
